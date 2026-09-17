@@ -37,6 +37,11 @@
   .app-header__link { padding: 13px; }
   .app-header__cta { justify-content: center; margin-top: 4px; }
 
+  .app-header__theme-toggle {
+    align-self: center;
+    margin: 8px 0;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
     gap: 42px;

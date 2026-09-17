@@ -1,6 +1,10 @@
-# Nexa Capital
+# Brand name
 
-Nexa Capital is a modern finance and investment SPA built with Vue 3. It presents a dark fintech interface for exploring financial products, saving favorites, selecting a product, and contacting the team.
+Brand name is a modern finance and investment SPA built with Vue 3. It presents a premium fintech interface for exploring financial products, saving favorites, selecting a product, and contacting the team.
+
+## Demo link
+
+[There is a demo link](https://finance-nu-sandy-30.vercel.app/)
 
 ## Tech stack
 
@@ -13,13 +17,16 @@ Nexa Capital is a modern finance and investment SPA built with Vue 3. It present
 
 ## Features
 
-- Responsive home page with a portfolio overview widget
-- Product catalog with category filters
+- Responsive home page with a portfolio overview widget and animated statistics counters
+- Product catalog with category filters and nine financial products
+- Show more and Show less controls for the product catalog
 - Favorite and product selection state managed by Pinia
 - Contact form with client-side validation
 - Animated page transitions and content reveal animations
 - Mobile navigation menu
-- Dark premium fintech visual system with no external UI framework
+- Light and dark themes with a persistent localStorage preference
+- Dynamic copyright year in the footer
+- Premium fintech visual system with no external UI framework
 
 ## Project structure
 
@@ -28,7 +35,12 @@ src/
 ├── assets/
 │   └── styles/
 │       ├── animations.css
-│       ├── components.css
+│       ├── base.css
+│       ├── contacts.css
+│       ├── header-footer.css
+│       ├── home.css
+│       ├── products.css
+│       ├── responsive.css
 │       └── variables.css
 ├── components/
 │   ├── AppFooter.vue
@@ -85,4 +97,7 @@ npm run preview
 - Shared product data and UI state live in `src/stores/financeStore.ts`.
 - Route components are lazy-loaded from `src/router/index.ts`.
 - Component classes follow the BEM pattern, for example `product-card__title` and `product-card--featured`.
+- Global styles are split by responsibility and imported from `src/assets/main.css`.
+- The product page shows six products initially, reveals the remaining products with `Show more`, and restores the first six with `Show less`.
+- The theme toggle stores the selected mode under the `nexa-theme` localStorage key.
 - The project intentionally uses custom CSS instead of Vuetify, Tailwind, or another UI library.

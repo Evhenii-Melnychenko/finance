@@ -2,7 +2,7 @@
   position: relative;
   z-index: 5;
   border-bottom: 1px solid var(--color-line);
-  background: rgba(11, 12, 16, 0.7);
+  background: color-mix(in srgb, var(--color-ink) 78%, transparent);
   backdrop-filter: blur(20px);
 }
 
@@ -60,6 +60,26 @@
 
 .app-header__menu-toggle {
   display: none;
+}
+
+.app-header__theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-white);
+  background: var(--color-surface-soft);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.app-header__theme-toggle:hover {
+  color: var(--color-violet-bright);
+  transform: rotate(12deg);
 }
 
 .app-footer {

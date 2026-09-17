@@ -62,11 +62,10 @@ onBeforeUnmount(() => cancelAnimationFrame(animationFrame))
     <section class="hero-section layout-container">
       <div class="hero-section__content reveal-item">
         <p class="eyebrow"><span class="eyebrow__dot"></span>Next-generation finance</p>
-        <h1 class="hero-section__title">Your capital.<br /><em>Your rules.</em></h1>
+        <h1 class="hero-section__title">Your name.<br /><em>Your rules.</em></h1>
         <p class="hero-section__description">Tools for people who want to do more than hold money. Build your future with it.</p>
         <div class="hero-section__actions">
           <RouterLink class="button" to="/products">Explore possibilities <span>↗</span></RouterLink>
-          <RouterLink class="text-link" to="/contacts">Learn more <span>→</span></RouterLink>
         </div>
         <div class="hero-section__trust"><span class="hero-section__avatars"><i>A</i><i>M</i><i>K</i></span><span>More than 12,000 people<br />are already with us</span></div>
       </div>

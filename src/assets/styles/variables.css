@@ -16,3 +16,14 @@
   --radius-md: 14px;
   --shadow-card: 0 20px 70px rgba(0, 0, 0, .2);
 }
+
+:root[data-theme='light'] {
+  --color-ink: #f4f5fb;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-surface-soft: #e9eaf4;
+  --color-white: #161722;
+  --color-muted: #626477;
+  --color-line: rgba(22, 23, 34, .12);
+  --shadow-card: 0 20px 70px rgba(47, 42, 104, .14);
+}
