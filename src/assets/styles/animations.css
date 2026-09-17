@@ -1,0 +1,64 @@
+.reveal-item { 
+  animation: reveal-up 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; 
+}
+
+.reveal-item--delay { 
+  animation-delay: 0.15s; 
+}
+
+.page-enter-active, 
+.page-leave-active { 
+  transition: opacity 0.25s ease, transform 0.25s ease; 
+}
+
+.page-enter-from { 
+  opacity: 0; 
+  transform: translateY(10px); 
+}
+
+.page-leave-to { 
+  opacity: 0; 
+  transform: translateY(-8px); 
+}
+
+.product-list-enter-active, 
+.product-list-leave-active { 
+  transition: all 0.35s ease; 
+}
+
+.product-list-enter-from, 
+.product-list-leave-to { 
+  opacity: 0; 
+  transform: translateY(15px); 
+}
+
+@keyframes reveal-up { 
+  from { 
+    opacity: 0;
+    transform: translateY(22px);
+  } 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
+
+@keyframes pulse-glow { 
+  0%, 100% { 
+    opacity: 0.45; 
+    transform: scale(1); 
+  } 
+  50% { 
+    opacity: 0.75; 
+    transform: scale(1.08); 
+  } 
+}
+
+@media (prefers-reduced-motion: reduce) { 
+  *, 
+  *::before, 
+  *::after { 
+    animation-duration: 0.01ms; 
+    transition-duration: 0.01ms; 
+  } 
+}

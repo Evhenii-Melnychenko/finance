@@ -1,0 +1,124 @@
+.contacts-view__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+}
+
+.contact-form,
+.contact-info {
+  padding: 34px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  color: var(--color-white);
+  font: 700 23px var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.contact-form > p,
+.contact-info > p {
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.form-field {
+  display: block;
+  margin-top: 22px;
+}
+
+.form-field span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 13px;
+  outline: 0;
+  resize: vertical;
+  color: var(--color-white);
+  background: rgba(0, 0, 0, 0.16);
+  font: 12px var(--font-body);
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--color-violet-bright); }
+
+.form-field small {
+  display: block;
+  margin-top: 5px;
+  color: #f08da9;
+  font-size: 10px;
+}
+
+.contact-form__submit {
+  margin-top: 26px;
+  cursor: pointer;
+}
+
+.contact-info {
+  background: linear-gradient(145deg, rgba(108, 92, 231, 0.2), rgba(255, 255, 255, 0.025) 68%);
+}
+
+.contact-info__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 37px;
+  line-height: 1.02;
+}
+
+.contact-info__orb {
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border: 1px solid rgba(162, 155, 254, 0.35);
+  border-radius: 50%;
+  color: var(--color-violet-bright);
+  font-size: 23px;
+}
+
+.contact-info dl { margin-top: 60px; }
+
+.contact-info dl div {
+  padding: 17px 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.contact-info dt {
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.contact-info dd {
+  margin-top: 6px;
+  color: var(--color-white);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contact-info__socials {
+  display: flex;
+  gap: 18px;
+}
+
+.contact-info__socials a {
+  color: var(--color-violet-bright);
+  text-decoration: none;
+}

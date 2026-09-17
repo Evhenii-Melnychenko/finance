@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import './styles/variables.css';
+
+@import './styles/animations.css';
+
+@import './styles/base.css';
+
+@import './styles/header-footer.css';
+
+@import './styles/home.css';
+
+@import './styles/products.css';
+
+@import './styles/contacts.css';
+
+@import './styles/responsive.css';
+
+*, *::before, 
+*::after { 
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html { 
+  scroll-behavior: smooth;
+}
+
+body { 
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color-white); 
+  background: var(--color-ink); 
+  font-family: var(--font-body); 
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea { 
+  font-family: inherit;
+}
+
+::selection { 
+  color: var(--color-ink);
+  background: var(--color-violet-bright); 
+}

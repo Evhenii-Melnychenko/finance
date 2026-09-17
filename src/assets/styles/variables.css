@@ -1,0 +1,18 @@
+:root {
+  --color-ink: #0b0c10;
+  --color-surface: #11131a;
+  --color-surface-raised: #181a24;
+  --color-surface-soft: #20222e;
+  --color-violet: #6c5ce7;
+  --color-violet-bright: #a29bfe;
+  --color-cyan: #7fe8e8;
+  --color-pink: #ed9dca;
+  --color-white: #f5f5f7;
+  --color-muted: #8e909e;
+  --color-line: rgba(255, 255, 255, .1);
+  --font-display: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --radius-lg: 24px;
+  --radius-md: 14px;
+  --shadow-card: 0 20px 70px rgba(0, 0, 0, .2);
+}
