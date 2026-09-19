@@ -1,5 +1,7 @@
 @media (max-width: 760px) {
-  .layout-container { width: min(100% - 28px, 600px); }
+  .layout-container {
+     width: min(100% - 28px, 600px);
+  }
 
   .app-header__menu-toggle {
     display: flex;
@@ -33,9 +35,18 @@
     box-shadow: var(--shadow-card);
   }
 
-  .app-header__nav--open { display: flex; }
-  .app-header__link { padding: 13px; }
-  .app-header__cta { justify-content: center; margin-top: 4px; }
+  .app-header__nav--open { 
+    display: flex;
+  }
+
+  .app-header__link { 
+    padding: 13px;
+  }
+
+  .app-header__cta { 
+    justify-content: center;
+    margin-top: 4px;
+  }
 
   .app-header__theme-toggle {
     align-self: center;
@@ -49,8 +60,13 @@
     padding-top: 65px;
   }
 
-  .hero-section__title { font-size: 47px; }
-  .hero-widget { min-height: 335px; }
+  .hero-section__title { 
+    font-size: 47px;
+  }
+
+  .hero-widget {
+    min-height: 335px;
+  }
 
   .stats-strip {
     grid-template-columns: 1fr;
@@ -63,26 +79,49 @@
   }
 
   .section-heading,
-  .page-intro { display: block; }
+  .page-intro {
+    display: block; 
+  }
 
   .section-heading > p,
-  .page-intro__description { margin-top: 24px; }
+  .page-intro__description {
+    margin-top: 24px;
+  }
 
   .benefits-grid,
-  .products-grid { grid-template-columns: 1fr; }
-  .benefits-section { padding: 85px 0; }
-  .page-view { padding-top: 52px; }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-section {
+    padding: 85px 0;
+  }
+
+  .page-view {
+    padding-top: 52px;
+  }
 
   .products-view__toolbar {
     align-items: start;
     gap: 10px;
   }
 
-  .filter-tabs { gap: 14px; }
-  .products-view__count { flex: none; }
-  .contacts-view__grid { grid-template-columns: 1fr; }
+  .filter-tabs { 
+    gap: 14px;
+  }
+
+  .products-view__count {
+    flex: none;
+  }
+
+  .contacts-view__grid { 
+    grid-template-columns: 1fr;
+  }
+
   .contact-form,
-  .contact-info { padding: 25px; }
+  .contact-info { 
+    padding: 25px;
+  }
 
   .app-footer__inner {
     flex-wrap: wrap;
@@ -95,7 +134,10 @@
     width: 100%;
   }
 
-  .selection-note { flex-wrap: wrap; }
+  .selection-note { 
+    flex-wrap: wrap;
+  }
+
   .selection-note .text-link {
     width: 100%;
     margin-left: 0;

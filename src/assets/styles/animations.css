@@ -1,9 +1,9 @@
 .reveal-item { 
   animation: reveal-up 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; 
-}
 
-.reveal-item--delay { 
-  animation-delay: 0.15s; 
+  &--delay {
+    animation-delay: 0.15s;
+  }
 }
 
 .page-enter-active, 
@@ -48,10 +48,21 @@
     opacity: 0.45; 
     transform: scale(1); 
   } 
+
   50% { 
     opacity: 0.75; 
     transform: scale(1.08); 
   } 
+}
+
+@keyframes typing-caret {
+  0%, 45% { 
+    opacity: 1;
+  }
+
+  46%, 100% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) { 

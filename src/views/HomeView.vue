@@ -23,7 +23,36 @@ const stats = ref<StatItem[]>([
   { value: 0, target: 4.9, decimals: 1, suffix: ' ★', label: 'average client rating' },
 ])
 
+const heroTitleTexts = ['Your capital.', 'Your future.', 'Your freedom.']
+const typedHeroTitle = ref('')
 let animationFrame = 0
+let typingTimer = 0
+let heroTitleIndex = 0
+let heroCharacterIndex = 0
+let isDeletingHeroTitle = false
+
+function typeHeroTitle() {
+  const currentTitle = heroTitleTexts[heroTitleIndex] ?? heroTitleTexts[0] ?? ''
+  const typingSpeed = isDeletingHeroTitle ? 55 : 95
+
+  heroCharacterIndex += isDeletingHeroTitle ? -1 : 1
+  typedHeroTitle.value = currentTitle.slice(0, heroCharacterIndex)
+
+  if (!isDeletingHeroTitle && heroCharacterIndex === currentTitle.length) {
+    isDeletingHeroTitle = true
+    typingTimer = window.setTimeout(typeHeroTitle, 1600)
+    return
+  }
+
+  if (isDeletingHeroTitle && heroCharacterIndex === 0) {
+    isDeletingHeroTitle = false
+    heroTitleIndex = (heroTitleIndex + 1) % heroTitleTexts.length
+    typingTimer = window.setTimeout(typeHeroTitle, 300)
+    return
+  }
+
+  typingTimer = window.setTimeout(typeHeroTitle, typingSpeed)
+}
 
 function animateStats() {
   const startedAt = performance.now()
@@ -46,15 +75,22 @@ function animateStats() {
 }
 
 onMounted(() => {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (shouldReduceMotion) {
+    typedHeroTitle.value = heroTitleTexts[0] ?? ''
     stats.value.forEach((stat) => { stat.value = stat.target })
     return
   }
 
+  typeHeroTitle()
   animateStats()
 })
 
-onBeforeUnmount(() => cancelAnimationFrame(animationFrame))
+onBeforeUnmount(() => {
+  cancelAnimationFrame(animationFrame)
+  window.clearTimeout(typingTimer)
+})
 </script>
 
 <template>
@@ -62,7 +98,7 @@ onBeforeUnmount(() => cancelAnimationFrame(animationFrame))
     <section class="hero-section layout-container">
       <div class="hero-section__content reveal-item">
         <p class="eyebrow"><span class="eyebrow__dot"></span>Next-generation finance</p>
-        <h1 class="hero-section__title">Your name.<br /><em>Your rules.</em></h1>
+        <h1 class="hero-section__title"><span class="hero-section__typed-title">{{ typedHeroTitle }}</span><span class="hero-section__caret" aria-hidden="true"></span><br /><em>Your rules.</em></h1>
         <p class="hero-section__description">Tools for people who want to do more than hold money. Build your future with it.</p>
         <div class="hero-section__actions">
           <RouterLink class="button" to="/products">Explore possibilities <span>↗</span></RouterLink>

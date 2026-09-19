@@ -168,7 +168,9 @@
   cursor: pointer;
 }
 
-.product-card__action span { margin-left: 7px; }
+.product-card__action span {
+  margin-left: 7px;
+}
 
 .selection-note {
   display: flex;
@@ -183,5 +185,10 @@
   font-size: 12px;
 }
 
-.selection-note strong { color: var(--color-white); }
-.selection-note .text-link { margin-left: auto; }
+.selection-note strong { 
+  color: var(--color-white);
+}
+
+.selection-note .text-link { 
+  margin-left: auto;
+}

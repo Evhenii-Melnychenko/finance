@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppFooter from './components/AppFooter.vue'
 import AppHeader from './components/AppHeader.vue'
+import PartnerMarquee from './components/PartnerMarquee.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AppHeader from './components/AppHeader.vue'
       <Transition name="page" mode="out-in">
         <RouterView />
       </Transition>
+      <PartnerMarquee />
     </main>
     <AppFooter />
   </div>
