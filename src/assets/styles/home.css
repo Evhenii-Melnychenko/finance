@@ -447,4 +447,9 @@
     height: 46px;
     letter-spacing: 0.08em;
   }
+
+  .stats-strip div:first-child {
+    padding: 0 0 0 15px;
+    border-left: 1px solid var(--color-line);
+  }
 }
