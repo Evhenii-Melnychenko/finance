@@ -13,6 +13,8 @@
 
 @import './styles/contacts.css';
 
+@import './styles/team.css';
+
 @import './styles/responsive.css';
 
 *, *::before, 

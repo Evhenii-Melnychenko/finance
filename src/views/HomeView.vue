@@ -1,21 +1,13 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import type { StatItem } from '../interfaces'
 
 const benefits = [
   { icon: '◈', title: 'Stay in control', text: 'One hub for your money, investments, and everyday spending.' },
   { icon: '↗', title: 'Grow with confidence', text: 'Insights and guidance help you make better decisions on time.' },
   { icon: '⌁', title: 'Transfers in seconds', text: 'Send money to the people you care about without the wait.' },
 ]
-
-interface StatItem {
-  value: number
-  target: number
-  decimals: number
-  prefix?: string
-  suffix?: string
-  label: string
-}
 
 const stats = ref<StatItem[]>([
   { value: 0, target: 860, decimals: 0, prefix: '$', suffix: 'M', label: 'assets under management' },

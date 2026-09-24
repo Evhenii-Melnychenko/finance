@@ -37,6 +37,7 @@ onMounted(() => {
       <nav class="app-header__nav" :class="{ 'app-header__nav--open': isMenuOpen }" aria-label="Main navigation">
         <RouterLink class="app-header__link" to="/" exact-active-class="app-header__link--active" @click="closeMenu">Overview</RouterLink>
         <RouterLink class="app-header__link" to="/products" active-class="app-header__link--active" @click="closeMenu">Products</RouterLink>
+        <RouterLink class="app-header__link" to="/team" active-class="app-header__link--active" @click="closeMenu">Our team</RouterLink>
         <RouterLink class="app-header__link" to="/contacts" active-class="app-header__link--active" @click="closeMenu">Contact</RouterLink>
         <button
           class="app-header__theme-toggle"

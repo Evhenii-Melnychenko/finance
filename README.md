@@ -10,7 +10,7 @@ Brand name is a modern finance and investment SPA built with Vue 3. It presents 
 
 - Vue 3 with Composition API and `<script setup lang="ts">`
 - TypeScript with strict type checking
-- Vue Router for three application routes
+- Vue Router for four application routes
 - Pinia for application state
 - Vite for development and production builds
 - Custom CSS with BEM naming, responsive layouts, and transitions
@@ -19,12 +19,15 @@ Brand name is a modern finance and investment SPA built with Vue 3. It presents 
 
 - Responsive home page with a portfolio overview widget and animated statistics counters
 - Product catalog with category filters and nine financial products
+- Our team page with interactive neon/blur profile cards, tilt hover effects, and profile modals
 - Show more and Show less controls for the product catalog
 - Favorite and product selection state managed by Pinia
 - Contact form with client-side validation
 - Animated page transitions and content reveal animations
+- Typewriter headings on the Products, Contacts, and Team pages
 - Mobile navigation menu
 - Light and dark themes with a persistent localStorage preference
+- Partner marquee with theme-aware colors and edge fade masks
 - Dynamic copyright year in the footer
 - Premium fintech visual system with no external UI framework
 
@@ -41,10 +44,12 @@ src/
 │       ├── home.css
 │       ├── products.css
 │       ├── responsive.css
+│       ├── team.css
 │       └── variables.css
 ├── components/
 │   ├── AppFooter.vue
 │   ├── AppHeader.vue
+│   ├── PartnerMarquee.vue
 │   └── ProductCard.vue
 ├── router/
 │   └── index.ts
@@ -53,7 +58,8 @@ src/
 ├── views/
 │   ├── ContactsView.vue
 │   ├── HomeView.vue
-│   └── ProductsView.vue
+│   ├── ProductsView.vue
+│   └── TeamView.vue
 ├── App.vue
 └── main.ts
 ```
@@ -64,6 +70,7 @@ src/
 | --- | --- |
 | `/` | Product overview, portfolio widget, and benefits |
 | `/products` | Filterable financial product catalog |
+| `/team` | Team profiles with interactive neon/blur cards |
 | `/contacts` | Validated contact form and company details |
 
 ## Setup
@@ -100,4 +107,6 @@ npm run preview
 - Global styles are split by responsibility and imported from `src/assets/main.css`.
 - The product page shows six products initially, reveals the remaining products with `Show more`, and restores the first six with `Show less`.
 - The theme toggle stores the selected mode under the `nexa-theme` localStorage key.
+- The partner marquee has dedicated light-theme colors so its cards and fade masks remain readable after switching themes.
+- Team profile cards use CSS glow/blur layers and pointer-based tilt without an external animation library.
 - The project intentionally uses custom CSS instead of Vuetify, Tailwind, or another UI library.

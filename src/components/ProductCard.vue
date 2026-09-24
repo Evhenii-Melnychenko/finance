@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { Product } from '../stores/financeStore'
+import type { Product } from '../interfaces'
 
 const props = defineProps<{ product: Product; isFavorite: boolean; isSelected: boolean }>()
 const emit = defineEmits<{ favorite: [id: number]; select: [id: number] }>()
