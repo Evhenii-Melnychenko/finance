@@ -10,7 +10,7 @@ Brand name is a modern finance and investment SPA built with Vue 3. It presents 
 
 - Vue 3 with Composition API and `<script setup lang="ts">`
 - TypeScript with strict type checking
-- Vue Router for four application routes
+- Vue Router for the application routes, including a catch-all 404 page
 - Pinia for application state
 - Vite for development and production builds
 - Custom CSS with BEM naming, responsive layouts, and transitions
@@ -25,6 +25,7 @@ Brand name is a modern finance and investment SPA built with Vue 3. It presents 
 - Contact form with client-side validation
 - Animated page transitions and content reveal animations
 - Typewriter headings on the Products, Contacts, and Team pages
+- Custom 404 page for unknown URLs, with a typewriter heading and a link back to the overview
 - Mobile navigation menu
 - Light and dark themes with a persistent localStorage preference
 - Partner marquee with theme-aware colors and edge fade masks
@@ -42,6 +43,7 @@ src/
 │       ├── contacts.css
 │       ├── header-footer.css
 │       ├── home.css
+│       ├── not-found.css
 │       ├── products.css
 │       ├── responsive.css
 │       ├── team.css
@@ -58,6 +60,7 @@ src/
 ├── views/
 │   ├── ContactsView.vue
 │   ├── HomeView.vue
+│   ├── NotFoundView.vue
 │   ├── ProductsView.vue
 │   └── TeamView.vue
 ├── App.vue
@@ -72,6 +75,7 @@ src/
 | `/products` | Filterable financial product catalog |
 | `/team` | Team profiles with interactive neon/blur cards |
 | `/contacts` | Validated contact form and company details |
+| `/:pathMatch(.*)*` | Custom 404 page for unmatched URLs |
 
 ## Setup
 
@@ -104,7 +108,7 @@ npm run preview
 - Shared product data and UI state live in `src/stores/financeStore.ts`.
 - Route components are lazy-loaded from `src/router/index.ts`.
 - Component classes follow the BEM pattern, for example `product-card__title` and `product-card--featured`.
-- Global styles are split by responsibility and imported from `src/assets/main.css`.
+- Global styles are split by responsibility; the 404 stylesheet is imported from `src/main.ts`.
 - The product page shows six products initially, reveals the remaining products with `Show more`, and restores the first six with `Show less`.
 - The theme toggle stores the selected mode under the `nexa-theme` localStorage key.
 - The partner marquee has dedicated light-theme colors so its cards and fade masks remain readable after switching themes.

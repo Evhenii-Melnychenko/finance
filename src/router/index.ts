@@ -7,6 +7,7 @@ const router = createRouter({
     { path: '/products', name: 'products', component: () => import('../views/ProductsView.vue') },
     { path: '/team', name: 'team', component: () => import('../views/TeamView.vue') },
     { path: '/contacts', name: 'contacts', component: () => import('../views/ContactsView.vue') },
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('../views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0, behavior: 'smooth' }),
 })
