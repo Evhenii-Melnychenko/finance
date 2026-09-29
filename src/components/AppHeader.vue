@@ -5,17 +5,17 @@ import { RouterLink } from 'vue-router'
 const isMenuOpen = ref(false)
 const isLightTheme = ref(false)
 
-function applyTheme(isLight: boolean) {
+const applyTheme = (isLight: boolean) => {
   isLightTheme.value = isLight
   document.documentElement.dataset.theme = isLight ? 'light' : 'dark'
   localStorage.setItem('nexa-theme', isLight ? 'light' : 'dark')
 }
 
-function toggleTheme() {
+const toggleTheme = () => {
   applyTheme(!isLightTheme.value)
 }
 
-function closeMenu() {
+const closeMenu = () => {
   isMenuOpen.value = false
 }
 

@@ -20,7 +20,7 @@
   border: 0;
   border-radius: 9px;
   padding: 13px 18px;
-  color: #fff;
+  color: var(--color-white);
   background: var(--color-violet);
   box-shadow: 0 8px 24px rgba(108, 92, 231, 0.25);
   font: 700 12px var(--font-body);

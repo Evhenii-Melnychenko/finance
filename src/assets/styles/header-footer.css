@@ -30,7 +30,7 @@
   width: 28px;
   height: 28px;
   border-radius: 9px;
-  color: #fff;
+  color:  var(--color-white);
   background: linear-gradient(135deg, var(--color-violet-bright), var(--color-violet));
   font-size: 15px;
 }
@@ -95,6 +95,7 @@
 
 .app-footer__brand {
   font-size: 14px;
+  gap: 0;
 }
 
 .app-footer__copy,
